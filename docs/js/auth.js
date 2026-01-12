@@ -7,7 +7,7 @@ function initUsers() {
             {
                 id: 1,
                 username: 'admin',
-                password: hashPassword('admin123'),
+                password: hashPassword('CyberAdmin#2026!SecurePass'),
                 isAdmin: true,
                 registrationDate: new Date().toISOString()
             },
