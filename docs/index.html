@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Вхід до Release Simulator ESA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Вітаємо у Release Simulator ESA</h1>
+        <p>Перед входом ознайомтесь із правилами користування цим проєктом:</p>
+        <ul class="rules-list">
+            <li>Цей ресурс призначений для моделювання процесу випуску програмного забезпечення.</li>
+            <li>Для роботи необхідна авторизація. Не передавайте свої облікові дані стороннім особам.</li>
+            <li>Всі дані зберігаються локально у вашому браузері.</li>
+            <li>Будь-які спроби несанкціонованого доступу до системи заборонені.</li>
+            <li>Використовуйте тільки офіційні браузери та не відключайте захист сторінки.</li>
+        </ul>
+        <a href="login.html" class="login-btn">Увійти до системи</a>
+        <p class="timer" id="timer">Ви будете автоматично перенаправлені до сторінки входу через 60 секунд.</p>
+    </div>
+
+    <script>
+        let seconds = 60;
+        function updateTimer() {
+            if (seconds > 0) {
+                document.getElementById("timer").textContent =
+                    "Ви будете автоматично перенаправлені до сторінки входу через " +
+                    seconds + " секунд.";
+                seconds--;
+            } else {
+                window.location.href = "login.html";
+            }
+        }
+        window.onload = function () {
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        };
+    </script>
+</body>
+</html>

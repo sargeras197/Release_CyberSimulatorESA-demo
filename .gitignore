@@ -1,0 +1,15 @@
+# Ігноруємо все окрім папки docs
+/*
+!docs/
+!.gitignore
+!README.md
+
+# Але ігноруємо ці файли навіть у docs
+*.pyc
+__pycache__/
+instance/
+*.db
+*.sqlite
+.env
+node_modules/
+.DS_Store

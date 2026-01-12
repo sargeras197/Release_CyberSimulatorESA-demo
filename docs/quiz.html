@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестування - Release Simulator ESA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Release Simulator ESA</div>
+        <div class="nav-user">
+            <a href="dashboard.html" style="margin-right: 15px; color: #293672; text-decoration: none;">← Назад</a>
+            <span id="username-display"></span>
+            <button onclick="logout()" class="btn btn-small">Вийти</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="quiz-container">
+            <h1>Тест з кібербезпеки</h1>
+            
+            <div id="quiz-section">
+                <form id="quizForm">
+                    <div id="questions-container"></div>
+                    <button type="submit" class="btn">Завершити тест</button>
+                </form>
+            </div>
+
+            <div id="result-section" style="display: none;">
+                <div class="result">
+                    <h2>Результат</h2>
+                    <p id="score-display"></p>
+                    <p id="time-display"></p>
+                    <button onclick="location.reload()" class="btn">Пройти ще раз</button>
+                    <a href="dashboard.html" class="btn" style="margin-left: 10px;">Повернутися до панелі</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/quiz-data.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика - Release Simulator ESA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Release Simulator ESA</div>
+        <div class="nav-user">
+            <a href="dashboard.html" style="margin-right: 15px; color: #293672; text-decoration: none;">← Назад</a>
+            <span id="username-display"></span>
+            <button onclick="logout()" class="btn btn-small">Вийти</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Практичні завдання</h1>
+        
+        <div class="practice-section">
+            <div class="test-card">
+                <h3>🔐 Тест 1: Перевірка паролів</h3>
+                <p>Перевірте, чи є ваш пароль у списку найпопулярніших (небезпечних) паролів.</p>
+                <input type="password" id="password-test" placeholder="Введіть пароль для перевірки" style="width: 100%; padding: 10px; margin: 10px 0; border: 2px solid #ddd; border-radius: 6px;">
+                <button onclick="checkPassword()" class="btn">Перевірити</button>
+                <div id="password-result" style="margin-top: 15px;"></div>
+            </div>
+
+            <div class="test-card">
+                <h3>📧 Тест 2: Розпізнавання фішингу</h3>
+                <p>Визначте, які з наведених листів є фішинговими.</p>
+                <div id="phishing-examples"></div>
+                <button onclick="checkPhishingAnswers()" class="btn">Перевірити відповіді</button>
+                <div id="phishing-result" style="margin-top: 15px;"></div>
+            </div>
+
+            <div class="test-card">
+                <h3>🛡️ Тест 3: Безпечні практики</h3>
+                <p>Оберіть усі безпечні практики з наведеного списку:</p>
+                <div style="text-align: left;">
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" name="practice" value="correct"> Використання унікальних паролів для кожного сервісу
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" name="practice" value="wrong"> Зберігання паролів у текстовому файлі на робочому столі
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" name="practice" value="correct"> Увімкнення двофакторної автентифікації
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" name="practice" value="wrong"> Відкривання вкладень з незнайомих електронних адрес
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" name="practice" value="correct"> Регулярне оновлення програмного забезпечення
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" name="practice" value="wrong"> Використання одного пароля для всіх акаунтів
+                    </label>
+                </div>
+                <button onclick="checkPractices()" class="btn">Перевірити</button>
+                <div id="practices-result" style="margin-top: 15px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/practice.js"></script>
+</body>
+</html>
